@@ -3,7 +3,7 @@ const express = require('express')
 const auth = require('../middleware/auth')
 const router = new express.Router()
 
-//posting new users and tasks
+//posting new tasks
 router.post('/tasks',auth, async(req, res) => {
     try {
         //const newTask = new Task(req.body)
@@ -15,7 +15,7 @@ router.post('/tasks',auth, async(req, res) => {
     }
 })
 
-//Listing users and tasks
+//Listing tasks
 //GET ?completed=true
 //GET ?limit=10&skip=20
 //GET ?sortBy=createdAt:desc
